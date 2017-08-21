@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>PokeDex!</title>
-	<link rel="stylesheet" type="text/css" href="style/main.css">
-</head>
-<body>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>PokeDex!</title>
+    <link rel="stylesheet" href="style/main.css"/>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/pokedex.js"></script>
+    <script src="js/data.js"></script>
+ </head>
+ <body>
+    <div class="Pokedex" id="pokedex">
+        <div class="Pokedex-left">
+            <div class="Pokedex-leftTop">
+                <div class="Btn Btn--coral Btn--big Btn--rounded" id="light"></div>
+                <div class="Btn Btn--red Btn--small Btn--rounded"></div>
+                <div class="Btn Btn--yellow Btn--small Btn--rounded"></div>
+                <div class="Btn Btn--green Btn--small Btn--rounded"></div>
+            </div>
+            <div class="Pokedex-window" >
+                <div class="Pokedex-sprite" id="sprite">
+                
+                </div>
+            </div>
+            <div class="Pokedex-leftBottom">
+                <div class="Btn Btn--blue Btn--medium Btn--rounded"></div>
+                <div class="Btn Btn--green Btn--large Btn--round"></div>
+                <div class="Btn Btn--orange Btn--large Btn--round"></div>
+                <form action="" class="Pokedex-search" id="search">
+                    <input type="text" placeholder="Pokemon Name">
+                </form>
+            </div>
+        </div>
+        <div class="Pokedex-rightFrontface">
+            <div class="Pokedex-rightFrontfaceTop"></div>
+            <div class="Pokedex-description" style=" overflow-y: auto; height:95px;"">
+                <p id="description">
+                    
+                </p>
+            </div>
+            <div class="Pokedex-rightFrontfaceBottom">
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+                <div class="Btn Btn--blue Btn--medium"></div>
+            </div>
+            <div class="Pokedex-leftBottom">
+                <div class="Btn Btn--gray Btn--large Btn--round" style="margin-left: 152px"></div>
+                <div class="Btn Btn--gray Btn--large Btn--round" style="margin-right: 50px"></div>
+            </div>
+            <div class="Pokedex-rightFrontfaceBottom">
+                <div class="Btn Btn--white Btn--small"></div>
+                <div class="Btn Btn--white Btn--small"></div>
+                <div class="Btn Btn--gold Btn--small Btn--rounded" style="margin-left: 200px"></div>
+            </div>
+            <div class="Pokedex-leftBottom">
+                <div class="Btn Btn--gray Btn--large Btn--square" style="margin-right: 150px;margin-left: 30px"></div>
+                <div class="Btn Btn--gray Btn--large Btn--square"></div>
+            </div>
+        </div>  
+        <div class="Pokedex-rightBackface">
+            <div class="Pokedex-rightBackfaceTop"></div>
+        </div>
+    </div>
+    
 
-</body>
-</html>
+ </body>
+ </html> 
