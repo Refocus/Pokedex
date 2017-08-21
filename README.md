@@ -59,3 +59,5 @@ A list of 151 Pokemon are present in the js/pokedex.json file. These following f
 ## CONTRIBUTING
 
 Send a pull request with what you worked on and we'll do a merge if everything seems fine.
+
+-- My first edit --
