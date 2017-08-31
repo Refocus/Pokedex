@@ -11,8 +11,8 @@ body {
 }
 .Btn {
     border: 1px solid #000;
-    -webkit-box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
-    box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+    /*-webkit-box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);*/
     cursor: pointer;
     display: inline-block;
     vertical-align: top;
@@ -30,6 +30,27 @@ body {
     -moz-animation: .3s isAnimated infinite;
     -webkit-animation: .3s isAnimated infinite;
     animation: .3s isAnimated infinite
+}
+.Btn.is-animated-red {
+    -o-animation: .4s isAnimatedr infinite;
+    -ms-animation: .4s isAnimatedr infinite;
+    -moz-animation: .4s isAnimatedr infinite;
+    -webkit-animation: .4s isAnimatedr infinite;
+    animation: .4s isAnimatedr infinite
+}
+.Btn.is-animated-yellow {
+    -o-animation: .5s isAnimatedy infinite;
+    -ms-animation: .5s isAnimatedy infinite;
+    -moz-animation: .5s isAnimatedy infinite;
+    -webkit-animation: .5s isAnimatedy infinite;
+    animation: .5s isAnimatedy infinite
+}
+.Btn.is-animated-green {
+    -o-animation: .6s isAnimatedg infinite;
+    -ms-animation: .6s isAnimatedg infinite;
+    -moz-animation: .6s isAnimatedg infinite;
+    -webkit-animation: .6s isAnimatedg infinite;
+    animation: .6s isAnimatedg infinite
 }
 .Btn--red {
     background: #f00
@@ -65,6 +86,10 @@ body {
 .Btn--large {
     width: 70px;
     height: 20px
+}
+.Btn--mini {
+    width: 70px;
+    height: 5px
 }
 .Btn--medium {
     width: 35px;
@@ -133,6 +158,141 @@ body {
         background: #fff
     }
 }
+/*-----------------------------------------------------------------------------*/
+@-moz-keyframes isAnimatedr {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #f00
+    }
+    100% {
+        background: #fff
+    }
+}
+@-webkit-keyframes isAnimatedr {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #f00
+    }
+    100% {
+        background: #fff
+    }
+}
+@-o-keyframes isAnimatedr {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #f00
+    }
+    100% {
+        background: #fff
+    }
+}
+@keyframes isAnimatedr {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #f00
+    }
+    100% {
+        background: #fff
+    }
+}
+/*-------------------------------------------------------------------------------------------*/
+@-moz-keyframes isAnimatedy {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #fc0
+    }
+    100% {
+        background: #fff
+    }
+}
+@-webkit-keyframes isAnimatedy {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #fc0
+    }
+    100% {
+        background: #fff
+    }
+}
+@-o-keyframes isAnimatedy {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #fc0
+    }
+    100% {
+        background: #fff
+    }
+}
+@keyframes isAnimatedy {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #fc0
+    }
+    100% {
+        background: #fff
+    }
+}
+/*--------------------------------------------------------------------------------------*/
+@-moz-keyframes isAnimatedg {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #7FFF00
+    }
+    100% {
+        background: #fff
+    }
+}
+@-webkit-keyframes isAnimatedg {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #7FFF00
+    }
+    100% {
+        background: #fff
+    }
+}
+@-o-keyframes isAnimatedg {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #7FFF00
+    }
+    100% {
+        background: #fff
+    }
+}
+@keyframes isAnimatedg {
+    0% {
+        background: #fff
+    }
+    50% {
+        background: #7FFF00
+    }
+    100% {
+        background: #fff
+    }
+}
 .Pokedex {
     margin: 100px auto 0;
     -ms-perspective: 1000px;
@@ -148,7 +308,7 @@ body {
     -webkit-border-radius: 10px 0 0 10px;
     border-radius: 10px 0 0 10px;
 }
-.Pokedex:hover .Pokedex-rightFrontface,
+/*.Pokedex:hover .Pokedex-rightFrontface,
 .Pokedex.is-active .Pokedex-rightFrontface {
     -o-transform: rotateY(0);
     -ms-transform: rotateY(0);
@@ -163,6 +323,21 @@ body {
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg)
+}*/
+
+.Pokedex-rightBackface.rotate-open {
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg)
+}
+.Pokedex-rightFrontface.rotate-close {
+    -o-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0)
 }
 .Pokedex-window {
     margin: 20px;
@@ -188,19 +363,23 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%
 }
-.Pokedex-search {
+/*.Pokedex-search {
     margin: 20px 0;
-}
-.Pokedex-search input {
-    background: #ffa500;
+}*/
+.Pokedex-search {
+    background: lightgreen;
     border: none;
     border: 1px solid #000;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     color: #000;
-    font-size: 20px;
+    text-align: center;
+    font-size: 40px;
     outline: 0;
     padding: 10px;
+    margin: 50px 50px;
+    width: 100px;
+    height: 50px;
 }
 .Pokedex-search input:focus {
     border: 1px solid #000
@@ -208,13 +387,18 @@ body {
 .Pokedex-search input::-webkit-input-placeholder {
     color: #fff
 }
-.Pokedex-description {
+.Pokedex-input {
     background: #696969;
     margin: 20px;
-    padding: 20px;
+    /*padding: 20px;*/
     -webkit-border-radius: 10px;
     border-radius: 10px;
     border: 2px solid #000;
+        height: 65px;
+    width: 255px;
+    margin-left: 50px;
+    color: white;
+    font-size: large;
 }
 .Pokedex-description1 {
     background: #696969;
@@ -320,7 +504,7 @@ body {
     backface-visibility: hidden;
     background: #dd092f;
     border: 1px solid #000;
-    border-left: 8px solid rgba(0, 0, 0, 0.3);
+    /*border-left: 8px solid rgba(0, 0, 0, 0.3);*/
     -webkit-border-radius: 0 0 0 10px;
     border-radius: 0 0 0 10px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -347,8 +531,8 @@ body {
     transition: 1s transform;
     width: 400px;
 }
-.Pokedex-rightBackface:after {
-    border-bottom: 25px solid transparent;
+/*.Pokedex-rightBackface:after {
+   border-bottom: 25px solid transparent;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-top: 25px solid transparent;
@@ -360,6 +544,23 @@ body {
     left: 0;
     display: block;
     margin: 0 auto;
+    margin-top: -25px
+}*/
+.open-button {
+   border-bottom: 25px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid transparent;
+    content: "";
+    display: inline-block;
+    border-left-color: #fc0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 0 rgba(255, 255, 255, 0.5);
     margin-top: -25px
 }
 .Pokedex-rightBackfaceTop {
@@ -403,4 +604,32 @@ body {
     -webkit-transform-origin: left top;
     transform-origin: left top;
     width: .5px
+}
+arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  
+  border-left: 20px solid #FFFF00;
+}
+
+.plus {
+    float: right;
+    margin: -200px -20px;
+}
+*::-webkit-input-placeholder {
+    color: white;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: white;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: white;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
 }
